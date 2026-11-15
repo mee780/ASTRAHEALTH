@@ -333,6 +333,9 @@ elif page == "Health Reports":
             download_csv(report,"astrahealth_combined_report.csv","DOWNLOAD COMBINED REPORT")
         else: st.info("No records are available to export yet.")
     st.caption("Exports contain only manually entered records for the selected crew identifier.")
-
+if label == "REVIEW":
+    st.warning(f"**{label}:** {msg}")
+else:
+    st.info(f"**{label}:** {msg}")
 st.markdown("---")
 st.markdown('<div style="text-align:center;color:#7893aa;font-size:.72rem;letter-spacing:1px">ASTRAHEALTH • CREW HEALTH MONITORING PROTOTYPE<br>NOT A MEDICAL DEVICE • NOT CONNECTED TO SPACECRAFT SENSORS • MANUAL DEMONSTRATION DATA ONLY</div>',unsafe_allow_html=True)
